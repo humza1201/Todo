@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #bd6c26);
+    font-family: "Baloo Bhai 2", sans-serif ,Arial;
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+    max-width: 30vw;
+    min-height: 50vh;
+    margin: 100px auto;
+    background-color: #9d9b9b8d;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.title{
+    font-size: 1rem;
+    color: #121212;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.input-container input{
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+}
+
+.input-container input:focus{
+    outline: none;
+}
+
+.input-container button{
+    width: 20%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #121212;
+    color: #f4f0f0;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.input-container button:hover{
+    background-color: #898484;
+    color: #121212;
+    scale: 1.1;
+}
+
+.task-list{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.task-list ul li{
+    list-style: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.list li::before{
+    content: " ";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: absolute;
+    left: -2rem;
+    background-image: url("images/unchecked.png");
+}
+
+.list li.tick{
+    color: #121212;
+    text-decoration: line-through;
+    transition: 0.5s;
+}
+
+.list li.tick::before{
+    background-image: url("images/tick.png");
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.close:hover{
+    transform: translateY(-50%) scale(1.2);
+}
